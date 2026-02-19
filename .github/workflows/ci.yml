@@ -54,7 +54,7 @@ jobs:
           pylint $(git ls-files -- '*.py' ':!:**/migrations/*.py')
 
   test:
-    name: Test
+    name: Test (py${{ matrix.python-version }}, ${{ matrix.broker }})
     runs-on: ubuntu-latest
     services:
       redis:
@@ -64,15 +64,24 @@ jobs:
         image: rabbitmq:3
         ports: ['5672:5672']
     strategy:
+      fail-fast: false
       matrix:
-        broker: [memory, redis, rabbitmq]
+        include:
+          - python-version: "3.8"
+            broker: memory
+          - python-version: "3.13"
+            broker: memory
+          - python-version: "3.13"
+            broker: redis
+          - python-version: "3.13"
+            broker: rabbitmq
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         id: setup-python
         with:
-          python-version: 3.13
+          python-version: ${{ matrix.python-version }}
 
       - name: Install Poetry
         uses: snok/install-poetry@v1
