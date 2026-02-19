@@ -1,18 +1,19 @@
 [tool.poetry]
-name = "prometheus-exporter-celery"
-version = "0.12.2"
+name = "legacy-prometheus-exporter-celery"
+version = "0.13.0"
 description = ""
 authors = [
 	"Dani Hodovic <dani.hodovic@gmail.com>",
 	"Adin Hodovic <adin@email.com>",
+        "Frank Wickström <noreply@gmail.com>",
 ]
 license = "MIT"
 packages = [
     { include = "src" },
 ]
 readme = "README.md"
-repository = "https://github.com/danihodovic/celery-exporter"
-documentation = "https://github.com/danihodovic/celery-exporter"
+repository = "https://github.com/frwickst/celery-exporter"
+documentation = "https://github.com/frwickst/celery-exporter"
 keywords = ["celery", "task-processing", "prometheus", "grafana", "monitoring"]
 classifiers = [
 	"Programming Language :: Python :: 3",
