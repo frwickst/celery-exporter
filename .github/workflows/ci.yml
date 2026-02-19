@@ -67,15 +67,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - python-version: "3.8"
-            broker: memory
-          - python-version: "3.13"
-            broker: memory
-          - python-version: "3.13"
-            broker: redis
-          - python-version: "3.13"
-            broker: rabbitmq
+        python-version: ["3.8", "3.13"]
+        broker: [memory, redis, rabbitmq]
     steps:
       - uses: actions/checkout@v4
 
