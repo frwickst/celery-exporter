@@ -142,7 +142,7 @@ def _eq_sign_separated_argument_to_dict(_ctx, _param, value):
     callback=_eq_sign_separated_argument_to_dict,
     help="Add label with static value to all metrics",
 )
-def cli(  # pylint: disable=too-many-arguments,too-many-positional-arguments,too-many-locals
+def cli(  # pylint: disable=too-many-arguments,too-many-locals
     broker_url,
     broker_transport_option,
     accept_content,

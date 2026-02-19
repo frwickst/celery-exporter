@@ -20,7 +20,7 @@ from .http_server import start_http_server
 class Exporter:  # pylint: disable=too-many-instance-attributes,too-many-branches
     state: State = None
 
-    # pylint: disable=too-many-arguments,too-many-positional-arguments
+    # pylint: disable=too-many-arguments
     def __init__(
         self,
         buckets=None,
