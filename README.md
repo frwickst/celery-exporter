@@ -32,6 +32,7 @@ Prometheus in real-time.
 - Exposes a health check endpoint at /health
 - Grafana dashboards provided by the Celery-mixin
 - Prometheus alerts provided by the Celery-mixin
+- Supports Python 3.8 through 3.13
 
 ## Dashboards and alerts
 
